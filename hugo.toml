@@ -1,0 +1,77 @@
+baseURL = 'http://127.0.0.1:1313/'
+theme = 'hugo-coder'
+defaultContentLanguage = 'zh-cn'
+
+[pagination]
+  pagerSize = 10
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  avatarURL = 'images/avatar.png'
+  faviconICO = 'favicon.ico'
+  since = 2026
+  colorScheme = 'auto'
+  hideColorSchemeToggle = false
+
+[[params.social]]
+  name = 'GitHub'
+  icon = 'fa-brands fa-github fa-2x'
+  weight = 1
+  url = 'https://github.com/zeroicey'
+
+[[params.social]]
+  name = 'Email'
+  icon = 'fa-solid fa-envelope fa-2x'
+  weight = 2
+  url = 'mailto:zeroicey.hp@gmail.com'
+
+[languages.zh-cn]
+  label = '中文'
+  locale = 'zh-CN'
+  title = '雪宁韵'
+  weight = 1
+
+  [languages.zh-cn.params]
+    author = '雪宁韵'
+    info = ['“去码头整点薯条”']
+    description = '雪宁韵的个人博客'
+    keywords = 'blog,personal,hugo'
+
+[[languages.zh-cn.menu.main]]
+  name = '博客'
+  weight = 1
+  url = 'posts/'
+
+[[languages.zh-cn.menu.main]]
+  name = '关于'
+  weight = 2
+  url = 'about/'
+
+[languages.en]
+  label = 'English'
+  locale = 'en-US'
+  title = 'zeroicey'
+  weight = 2
+
+  [languages.en.params]
+    author = 'zeroicey'
+    info = ['Go to the dock to order some french fries.']
+    description = "zeroicey's personal website"
+    keywords = 'blog,personal,hugo'
+
+[[languages.en.menu.main]]
+  name = 'Blog'
+  weight = 1
+  url = 'posts/'
+
+[[languages.en.menu.main]]
+  name = 'About'
+  weight = 2
+  url = 'about/'
