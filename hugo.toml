@@ -1,4 +1,4 @@
-baseURL = 'http://127.0.0.1:1313/'
+baseURL = 'https://zeroicey.me/'
 theme = 'hugo-coder'
 defaultContentLanguage = 'zh-cn'
 
