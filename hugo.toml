@@ -14,11 +14,12 @@ defaultContentLanguage = 'zh-cn'
       unsafe = true
 
 [params]
-  avatarURL = 'images/avatar.png'
+  avatarURL = 'images/avatar.webp'
   faviconICO = 'favicon.ico'
   since = 2026
   colorScheme = 'auto'
   hideColorSchemeToggle = false
+  preconnect = ['https://s3.blog.zeroicey.me']
 
 [[params.social]]
   name = 'GitHub'
