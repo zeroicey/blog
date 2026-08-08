@@ -1,0 +1,8 @@
+[search]
+other = "Search"
+
+[close]
+other = "Close"
+
+[search_unavailable]
+other = "Search unavailable, please try again later"

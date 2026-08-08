@@ -10,6 +10,9 @@
       <label class="menu-button float-right" for="menu-toggle">
         <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
+      <button class="search-button float-right" type="button" aria-label="{{ T "search" }}" onclick="openSearch()">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      </button>
       <ul class="navigation-list">
         {{ with .Site.Menus.main}}
           {{ range sort . }}
@@ -39,3 +42,4 @@
     {{ end }}
   </section>
 </nav>
+{{ partial "search.html" . }}

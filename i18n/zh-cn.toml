@@ -1,0 +1,8 @@
+[search]
+other = "搜索"
+
+[close]
+other = "关闭"
+
+[search_unavailable]
+other = "搜索不可用,请稍后重试"
