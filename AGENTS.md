@@ -7,7 +7,7 @@ Hugo 多语言博客(中文 + English),部署在 Cloudflare Pages。用户(雪�
 - **框架**: Hugo v0.161+ (extended),主题 `hugo-coder`(git submodule)
 - **内容**: `content/posts/*.md`(中文)+ `*.en.md`(英文翻译,双语成对维护)
 - **配置**: `hugo.toml`,默认语言 zh-cn,baseURL `https://zeroicey.me/`
-- **本地构建**: `hugo --gc --minify`,产物在 `public/`(不入库)
+- **本地构建**: `hugo --gc --minify`,产物在 `public/`(不入库);`.wrangler/` 是 wrangler 本地状态,不入库
 - **发布流程**: git commit + push 到 `main` → Cloudflare Pages 自动构建部署
 
 ## 写新文章的模板
