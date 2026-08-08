@@ -21,6 +21,16 @@ defaultContentLanguage = 'zh-cn'
   hideColorSchemeToggle = false
   preconnect = ['https://s3.blog.zeroicey.me']
 
+[params.giscus]
+  repo = 'zeroicey/blog'
+  repoID = 'R_kgDOSjjc-g'
+  category = 'General'
+  categoryID = 'DIC_kwDOSjjc-s4DC64_'
+  mapping = 'pathname'
+  theme = 'preferred_color_scheme'
+  loading = 'lazy'
+  reactionsEnabled = '1'
+
 [[params.social]]
   name = 'GitHub'
   icon = 'fa-brands fa-github fa-2x'
