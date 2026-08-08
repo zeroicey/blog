@@ -21,6 +21,8 @@ Herdr 的官方定位是 **"the runtime coding agents run on"** —— 一个为
 - **Agent 之间的自动化**：CLI 和 socket API 是同一套表面，agent 可以互相开 pane、读输出、等彼此。
 - **轻量**：~10MB 的 Rust 二进制（Ratatui），没有 Electron、没有账号、没有遥测，AGPL 开源。
 
+![Herdr 使用界面](https://s3.blog.zeroicey.me/20260808123835.png)
+
 安装就一行：
 
 ```bash

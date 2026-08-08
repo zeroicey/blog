@@ -21,6 +21,8 @@ Herdr's official positioning is **"the runtime coding agents run on"** — a ter
 - **Agent-to-agent automation**: the CLI and socket API are the same surface, so agents can spawn panes for each other, read output, and wait on each other.
 - **Lightweight**: a ~10MB Rust binary (Ratatui), no Electron, no account, no telemetry, AGPL open source.
 
+![Herdr UI](https://s3.blog.zeroicey.me/20260808123835.png)
+
 Installation is one line:
 
 ```bash
