@@ -35,7 +35,7 @@ Claude Code 以为自己在对 Anthropic 说话，实际上请求被代理改写
 - **热重载**：改配置文件不用重启
 - **GUI 面板**：实时指标、请求历史（macOS 原生窗口，Linux 浏览器）
 
-![routatic-proxy 项目仓库](https://s3.blog.zeroicey.me/20260810143410.png)
+![routatic-proxy 项目仓库](https://s3.blog.zeroicey.me/20260810144500.png)
 
 # 第一步：安装
 
@@ -195,11 +195,11 @@ OpenCode Go 的 $10 是"6 倍杠杆"：官方希望你每月用到 $60 的量，
 - **超额兜底**：用超了 Go 额度，代理的 fallback 链会落到 OpenCode Zen 的**免费模型**（nemotron-3-ultra-free 等），不至于直接断
 - **模型质量**：DeepSeek V4 Flash 在 Go 里的价格是 $0.14/$0.28，比官方 API 便宜一截，编码场景完全够用
 
-![OpenCode Go 订阅价格与用量](https://s3.blog.zeroicey.me/20260810143400.png)
+![OpenCode Go 订阅价格与用量](https://s3.blog.zeroicey.me/20260810144510.png)
 
 DeepSeek 官方定价（含"即将涨价"公告）：
 
-![DeepSeek 官方 API 价格](https://s3.blog.zeroicey.me/20260810143420.png)
+![DeepSeek 官方 API 价格](https://s3.blog.zeroicey.me/20260810144520.png)
 
 # 还能再白嫖：模型发现
 

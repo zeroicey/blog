@@ -35,7 +35,7 @@ The project (923 stars, AGPL-3.0) highlights:
 - **Hot reload**: config changes without restarting
 - **GUI dashboard**: live metrics, request history (native window on macOS, browser on Linux)
 
-![routatic-proxy repository](https://s3.blog.zeroicey.me/20260810143410.png)
+![routatic-proxy repository](https://s3.blog.zeroicey.me/20260810144500.png)
 
 # Step 1: Install
 
@@ -195,11 +195,11 @@ The $10 buys $60 of usage — a 6x multiplier. And it gets better:
 - **Over-limit fallback**: when the Go quota is exhausted, the proxy's fallback chain lands on OpenCode Zen's **free models** (nemotron-3-ultra-free etc.) instead of failing outright.
 - **Model quality**: DeepSeek V4 Flash costs $0.14/$0.28 per million tokens here, cheaper than the official API, and it handles coding tasks well.
 
-![OpenCode Go pricing and usage](https://s3.blog.zeroicey.me/20260810143400.png)
+![OpenCode Go pricing and usage](https://s3.blog.zeroicey.me/20260810144510.png)
 
 DeepSeek official pricing (including the "price hike coming soon" notice):
 
-![DeepSeek official API pricing](https://s3.blog.zeroicey.me/20260810143420.png)
+![DeepSeek official API pricing](https://s3.blog.zeroicey.me/20260810144520.png)
 
 # Bonus: Model Discovery
 
