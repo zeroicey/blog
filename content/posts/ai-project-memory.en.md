@@ -1,6 +1,6 @@
 +++
 title = 'Giving AI Coding Assistants "Project Memory": A Self-Iterating Design'
-date = '2026-08-23T22:00:00+08:00'
+date = '2026-08-23T21:15:00+08:00'
 draft = false
 tags = ['AI Agent', 'pi', 'Project Memory', 'Prompt Engineering', 'ADR', 'Workflow']
 description = 'A "project memory" system running in three real projects: a three-layer memory model plus a 200-line extension for automatic injection, with the write path still driven by convention. This is a living document — how it works today, where it has already broken down, and what comes next.'
