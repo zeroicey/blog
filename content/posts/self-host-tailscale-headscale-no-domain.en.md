@@ -41,7 +41,7 @@ Here's the big picture; every step after this fills in a piece of the diagram:
    │100.64.  │   │100.64. │   │100.64.  │   │100.64.  │
    │ 12.1    │   │ 12.3   │   │ 12.5    │   │ 12.2    │
    └─────────┘   └────────┘   └─────────┘   └─────────┘
-   (plus workcloud / nas / phone, added later)
+   (plus workcloud / nas / phone / pad, added later)
 ```
 
 The virtual network uses Headscale's default CGNAT range `100.64.0.0/10`; node addresses are allocated by the control plane from that pool (examples here use `100.64.12.x` — your actual addresses show up in `tailscale status`).
@@ -56,6 +56,7 @@ The virtual network uses Headscale's default CGNAT range `100.64.0.0/10`; node a
 | workcloud | Company cloud server | Linux | 100.64.12.4 |
 | nas | Another LAN box | Arch Linux | 100.64.12.6 |
 | phone | Phone | iOS | 100.64.12.7 |
+| pad | Tablet | Android (HyperOS) | 100.64.12.8 |
 
 ## Prerequisites: a server with a public IP
 
@@ -319,7 +320,22 @@ The official App Store Tailscale app **natively supports a custom coordination s
 
 > ⚠️ **Installing the profile ≠ trusting the cert.** Without full trust, Safari keeps showing "This connection is not private", the control plane logs spam `tls: bad certificate`, and login keeps failing. See gotcha #7.
 
-### 2.5 Verify the join
+### 2.5 Android
+
+The official Play / F-Droid Tailscale app **natively supports a custom coordination server too** — no third-party app needed:
+
+1. Get `ca.crt` onto the tablet (a download link / temporary HTTP server both work).
+2. **Install it as a "CA certificate"** (the critical, easy-to-get-wrong step): Settings → Security / Passwords & security → Encryption & credentials → Install a certificate → **CA certificate** → pick the downloaded `ca.crt`. (Menus vary by brand — look for the words "CA certificate".)
+3. Verify you got the type right: Settings → … → Encryption & credentials → Trusted credentials → the **User** tab should list your CA (e.g. `HomeMesh Root CA`). If it's not there, you installed the wrong type.
+4. Open the Tailscale app → top-right settings/avatar → Accounts → top-right **⋮** → **Use an alternate server** → `https://203.0.113.10`.
+5. Tap **⋮** again → **Use an auth key** → paste the pre-auth key.
+6. Back on the main screen, tap Log in / Connect.
+
+> ⚠️ **Android's gotcha is different from iOS**: iOS is "install the profile → flip the full-trust switch"; Android has no such switch — **trust depends on which certificate type you install**. It must be a "CA certificate" (landing in the system trust anchors), not a "VPN and apps" certificate (just an app/private-key credential the app ignores — the control plane log will still spam `tls: bad certificate`). Tapping the downloaded file directly often installs the wrong type. See gotcha #9.
+
+> ⚠️ There's also an **upstream known bug** in the Android app with self-signed certs: even with the CA installed correctly, DERP relay connections may still not trust it, showing `no-derp-connection` / `tls-connection-failed` health warnings. In practice, the tablet reaches peers **directly when on the same LAN**, but when away (cellular / another Wi-Fi) and relying on DERP relay, it may fail. For mobile devices that must work anywhere, prefer a publicly-trusted cert (Let's Encrypt / a domain) over self-signed.
+
+### 2.6 Verify the join
 
 ```bash
 tailscale status                 # nodes and online state
@@ -431,27 +447,27 @@ Write `/etc/headscale/acl-policy.hujson`:
       "dst": ["100.64.12.1", "100.64.12.2", "100.64.12.4", "100.64.12.6"],
       "ip": ["*"]
     },
-    // 2) personal devices (laptop/desktop/phone) can reach each other: full access
+    // 2) personal devices (laptop/desktop/phone/tablet) can reach each other: full access
     {
-      "src": ["100.64.12.3", "100.64.12.5", "100.64.12.7"],
-      "dst": ["100.64.12.3", "100.64.12.5", "100.64.12.7"],
+      "src": ["100.64.12.3", "100.64.12.5", "100.64.12.7", "100.64.12.8"],
+      "dst": ["100.64.12.3", "100.64.12.5", "100.64.12.7", "100.64.12.8"],
       "ip": ["*"]
     },
     // 3) main server core → personal devices: full access (for remote troubleshooting)
     {
       "src": ["100.64.12.1"],
-      "dst": ["100.64.12.3", "100.64.12.5", "100.64.12.7"],
+      "dst": ["100.64.12.3", "100.64.12.5", "100.64.12.7", "100.64.12.8"],
       "ip": ["*"]
     },
     // 4) personal devices → core: whitelisted ports only (example, adjust as needed)
     {
-      "src": ["100.64.12.3", "100.64.12.5", "100.64.12.7"],
+      "src": ["100.64.12.3", "100.64.12.5", "100.64.12.7", "100.64.12.8"],
       "dst": ["100.64.12.1"],
       "ip": ["22", "443", "3000", "8080", "25565"]
     },
     // 5) personal devices → nas: SSH only
     {
-      "src": ["100.64.12.3", "100.64.12.5", "100.64.12.7"],
+      "src": ["100.64.12.3", "100.64.12.5", "100.64.12.7", "100.64.12.8"],
       "dst": ["100.64.12.6"],
       "ip": ["22"]
     }
@@ -559,6 +575,7 @@ Roughly in order of how often they bite:
 6. **macOS rejects long-lived certs** (`OtherTrustValidityPeriod`): Apple caps at 398 days, so sign the server cert for 397 days (the CA can be long-lived).
 7. **On iOS, installing the profile ≠ trusting it.** You must also flip the switch in Certificate Trust Settings, otherwise you get `tls: bad certificate` and repeated login failures. When debugging phone joins, first grep the control-plane log for that line.
 8. **Don't set `override_local_dns: true`.** It forces all public DNS through the configured nameservers (e.g. 1.1.1.1), which can be very slow or time out on some networks — manifesting as browser lag. Keep it `false` so MagicDNS only owns `.internal`.
+9. **On Android, install the CA as a "CA certificate" type — and mind the DERP/self-signed bug.** Android has no iOS-style full-trust switch: trust depends on the cert type ("CA certificate" → trust anchor; "VPN and apps" → ignored, control plane still logs `tls: bad certificate`). Even installed correctly, DERP relay may still distrust the self-signed CA (`no-derp-connection`); same-LAN direct connections are unaffected, but cross-network use may need a publicly-trusted cert.
 
 ## Security notes
 
