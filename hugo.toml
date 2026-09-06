@@ -26,7 +26,7 @@ enableRobotsTXT = true
   disableThemeToggle = false
 
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
@@ -75,14 +75,6 @@ enableRobotsTXT = true
       imageUrl = 'images/avatar.webp'
       imageTitle = '雪宁韵'
 
-      [[languages.zh.params.profileMode.buttons]]
-        name = '博客'
-        url = '/posts/'
-
-      [[languages.zh.params.profileMode.buttons]]
-        name = '关于'
-        url = '/about/'
-
   [[languages.zh.menu.main]]
     name = '博客'
     url = 'posts/'
@@ -124,14 +116,6 @@ enableRobotsTXT = true
       subtitle = 'Go to the dock to order some french fries.'
       imageUrl = 'images/avatar.webp'
       imageTitle = 'zeroicey'
-
-      [[languages.en.params.profileMode.buttons]]
-        name = 'Blog'
-        url = '/posts/'
-
-      [[languages.en.params.profileMode.buttons]]
-        name = 'About'
-        url = '/about/'
 
   [[languages.en.menu.main]]
     name = 'Blog'
