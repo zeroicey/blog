@@ -6,7 +6,7 @@ tags = ['Tailscale', 'Headscale', 'Sunshine', 'Moonlight', 'RustDesk', '远程�
 description = '给没有显示器的主机装上远程桌面：DP 诱骗器伪装一块屏幕，Sunshine 用 AMD 核显硬件编码推流，Moonlight 客户端经 Tailscale 点对点直连；对比 RustDesk 的软编高 CPU，并附自建 RustDesk 中继服务器方案。'
 
 [cover]
-  image = 'covers/tailscale-sunshine-moonlight-remote-desktop.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/tailscale-sunshine-moonlight-remote-desktop.jpg'
 +++
 
 上一篇《从零自建 Tailscale 网络》把家里和云端的机器都拉进了同一个虚拟局域网。网里的每一台设备现在都能互相点到为止地址了——但「能连」和「能像坐在机箱前一样操作」是两回事。

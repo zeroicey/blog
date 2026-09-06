@@ -6,7 +6,7 @@ tags = ['Tailscale', 'Headscale', 'VPN', 'Self-Hosted', '组网', '教程']
 description = '没有备案域名也能自建 Tailscale 网络：用 Headscale 自托管控制面 + 嵌入式 DERP，以公网 IP + 自签 CA 免域名组网，并安装 Headplane 管理面板，附完整命令与踩坑记录。'
 
 [cover]
-  image = 'covers/self-host-tailscale-headscale-no-domain.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/self-host-tailscale-headscale-no-domain.jpg'
 +++
 
 Tailscale 是近几年最好用的组网工具之一：把分布在不同网络的设备（家里的主机、笔记本、手机、公司/海外云服务器）拉进同一个虚拟局域网，点对点直连、自动打洞、内置 ACL 和 MagicDNS。但它默认连的是官方协调服务器（control plane），控制面不在自己手里。

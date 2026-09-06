@@ -5,7 +5,7 @@ draft = false
 tags = ['macOS', 'Karabiner-Elements', 'Key Remapping', 'Keyboard Optimization', 'Productivity', 'Vim', 'Input Method']
 
 [cover]
-  image = 'covers/macos-remap-capslock-escape-control.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/macos-remap-capslock-escape-control.jpg'
 +++
 
 Still bothered by the Chinese/English toggle key taking up valuable keyboard space on macOS? This tutorial shows you how to use Karabiner-Elements to transform it into a dual-function key: short press for ESC, long press for Control. Say goodbye to wasted key positions!

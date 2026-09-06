@@ -6,7 +6,7 @@ tags = ['Go', 'Embed', 'CI/CD', 'GitHub Actions', 'Frontend', 'Deployment', 'Aut
 description = 'This article documents how to use Go embed to package frontend build artifacts directly into the backend binary for single-file delivery, combined with GitHub Actions to automate the build, release, and server deployment pipeline.'
 
 [cover]
-  image = 'covers/go-embed-frontend-cicd-deploy.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/go-embed-frontend-cicd-deploy.jpg'
 +++
 
 This article documents how to use Go's `embed` package to package frontend build artifacts directly into the backend binary for single-file delivery. Combined with GitHub Actions, we'll create an automated pipeline that connects frontend building, Go compilation, artifact release, and server deployment into a seamless workflow, ensuring more stable builds and deployments with every commit.

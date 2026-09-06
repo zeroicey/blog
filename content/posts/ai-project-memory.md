@@ -6,7 +6,7 @@ tags = ['AI Agent', 'pi', '项目记忆', '提示词工程', 'ADR', '工作流']
 description = '三个真实项目在用的「项目记忆」方案：三层记忆模型 + 200 行扩展实现自动注入，写路径靠收尾纪律。这篇是活文档——记录它现在怎么工作、哪些地方已经暴露出问题、下一步怎么改，随迭代持续更新。'
 
 [cover]
-  image = 'covers/ai-project-memory.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/ai-project-memory.jpg'
 +++
 
 如果你让 AI 助手维护一个项目超过一周，一定会遇到这个问题：**每次开新会话，它都失忆了**。

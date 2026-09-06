@@ -5,7 +5,7 @@ draft = false
 tags = ['Python', '接口', 'Protocol', '鸭子类型', '设计模式', '类型提示', '软件架构', '面向对象']
 
 [cover]
-  image = 'covers/python-explore-programming-interface.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/python-explore-programming-interface.jpg'
 +++
 
 # 为什么需要接口

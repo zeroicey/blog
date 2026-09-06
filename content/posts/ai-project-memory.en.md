@@ -6,7 +6,7 @@ tags = ['AI Agent', 'pi', 'Project Memory', 'Prompt Engineering', 'ADR', 'Workfl
 description = 'A "project memory" system running in three real projects: a three-layer memory model plus a 200-line extension for automatic injection, with the write path still driven by convention. This is a living document — how it works today, where it has already broken down, and what comes next.'
 
 [cover]
-  image = 'covers/ai-project-memory.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/ai-project-memory.jpg'
 +++
 
 If you have ever had an AI assistant maintain a project for more than a week, you know the problem: **every new session starts from amnesia**.

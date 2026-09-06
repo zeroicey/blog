@@ -5,7 +5,7 @@ draft = false
 tags = ['Herdr', 'Tmux', '终端复用器', 'AI Agent', '迁移', '效率工具']
 
 [cover]
-  image = 'covers/herdr-tmux-migration.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/herdr-tmux-migration.jpg'
 +++
 
 我是一个重度 Tmux 用户。它的快捷键我用得很顺手，但那个 UI 我是真的受不了，自己动手定制也觉得很难受。

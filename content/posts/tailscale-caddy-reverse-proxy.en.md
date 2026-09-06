@@ -6,7 +6,7 @@ tags = ['Tailscale', 'Headscale', 'Caddy', 'reverse-proxy', 'MagicDNS', 'self-ho
 description = 'MagicDNS resolves hostnames but still forces you to type ports after the domain. Use Caddy + a wildcard cert from your existing mesh CA + headscale extra_records to give every service a memorable, portless HTTPS domain — green lock included, zero client setup.'
 
 [cover]
-  image = 'covers/tailscale-caddy-reverse-proxy.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/tailscale-caddy-reverse-proxy.jpg'
 +++
 
 The first two posts finished the "can I reach it" part. Part one pulled home and cloud machines into one Tailscale mesh and set up MagicDNS, so `core.homemesh.internal` now resolves to the main server. Part two made that headless server usable as if you were sitting in front of it.
