@@ -4,9 +4,11 @@ Hugo 多语言博客(中文 + English),部署在 Cloudflare Pages。用户(雪�
 
 ## 项目概览
 
-- **框架**: Hugo v0.161+ (extended),主题 `hugo-coder`(git submodule)
-- **内容**: `content/posts/*.md`(中文)+ `*.en.md`(英文翻译,双语成对维护)
-- **配置**: `hugo.toml`,默认语言 zh-cn,baseURL `https://zeroicey.me/`
+- **框架**: Hugo v0.161+ (extended),主题 `hugo-PaperMod`(git submodule)
+- **内容**: `content/posts/*.md`(中文)+ `*.en.md`(英文翻译,双语成对维护);另有 `content/about*.md`、`content/search*.md`、`content/archives*.md`
+- **配置**: `hugo.toml`,默认语言 zh,baseURL `https://zeroicey.me/`
+- **搜索**: PaperMod 内置 Fuse.js(首页 `outputs.home` 含 JSON 生成 `index.json`),无 Pagefind 依赖
+- **评论**: giscus,走 `layouts/_partials/comments.html` 覆盖(随 PaperMod `data-theme` 同步明暗)
 - **本地构建**: `hugo --gc --minify`,产物在 `public/`(不入库);`.wrangler/` 是 wrangler 本地状态,不入库
 - **发布流程**: git commit + push 到 `main` → Cloudflare Pages 自动构建部署
 
