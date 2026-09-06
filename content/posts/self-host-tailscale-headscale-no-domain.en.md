@@ -4,6 +4,9 @@ date = '2026-09-05T12:00:00+08:00'
 draft = false
 tags = ['Tailscale', 'Headscale', 'VPN', 'Self-Hosted', 'Networking', 'Tutorial']
 description = 'Build your own Tailscale-style mesh VPN with no domain and no ICP filing: a self-hosted Headscale control plane with an embedded DERP relay, IP + self-signed CA auth, and a Headplane web panel — with every command and the gotchas.'
+
+[cover]
+  image = 'covers/self-host-tailscale-headscale-no-domain.jpg'
 +++
 
 Tailscale is one of the best mesh-networking tools around: it pulls devices scattered across different networks — your home server, laptop, phone, company and overseas VPS — into a single virtual LAN, with peer-to-peer direct connections, automatic NAT traversal, built-in ACLs and MagicDNS. The catch: out of the box it connects to Tailscale's official coordination server, so the control plane isn't yours.

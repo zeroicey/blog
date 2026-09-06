@@ -4,6 +4,9 @@ date = '2026-09-06T12:30:00+08:00'
 draft = false
 tags = ['Tailscale', 'Headscale', 'Caddy', '反向代理', 'MagicDNS', '自托管', '教程', '内网穿透']
 description = 'MagicDNS 只能把域名解析到主机，访问服务还得在域名后面加端口。用 Caddy 反向代理 + 复用组网 CA 签一张通配符证书 + 两条 extra_records，给每个服务一个免端口的 HTTPS 好记域名，全程绿锁、零客户端配置。'
+
+[cover]
+  image = 'covers/tailscale-caddy-reverse-proxy.jpg'
 +++
 
 前两篇把「连得上」这件事做完了：第一篇把家里和云端的机器拉进同一个 Tailscale 虚拟局域网，还配好了 MagicDNS——现在输入 `core.homemesh.internal` 就能指到主服务器；第二篇让这台没接屏的主服务器像坐在机箱前一样被远程操作。

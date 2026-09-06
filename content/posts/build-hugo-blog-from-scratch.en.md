@@ -4,6 +4,9 @@ date = '2026-08-08T14:30:00+08:00'
 draft = false
 tags = ['Hugo', 'Cloudflare Pages', 'Blog', 'Tutorial', 'R2', 'Pagefind', 'giscus', 'SEO']
 description = 'Using this blog as the example: from installing Hugo to going live, plus site search, comments, and search engine indexing — a complete zero-cost blog setup guide.'
+
+[cover]
+  image = 'covers/build-hugo-blog-from-scratch.jpg'
 +++
 
 > **Update (2026-09-06)**: The theme has been migrated from `hugo-coder` to `hugo-PaperMod`, and site search switched from Pagefind to PaperMod's built-in Fuse.js. The "Theme" and "Step 6: Site Search" sections describe the pre-migration setup; the methodology (Hugo + Cloudflare Pages + R2) still applies.

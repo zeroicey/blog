@@ -4,6 +4,9 @@ date = '2026-08-10T14:37:00+08:00'
 draft = false
 tags = ['OpenCode Go', 'Claude Code', 'DeepSeek', 'routatic-proxy', 'AI Agent', 'Productivity', 'Tutorial']
 description = 'DeepSeek official API is pay-as-you-go and getting more expensive. OpenCode Go gives you $60 of model usage for $10/month. This post connects that subscription to Claude Code via the open-source routatic-proxy, with a full setup guide and two real pitfalls.'
+
+[cover]
+  image = 'covers/opencode-go-in-claude-code.jpg'
 +++
 
 I've written code with Claude Code for a long time, and I've switched model backends more than once. Last year I moved to the DeepSeek official API — pay-as-you-go, and 100 RMB evaporated within days. Then one afternoon, `claude` slapped me with a **402 Payment Required**. Out of balance.

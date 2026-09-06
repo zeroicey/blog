@@ -3,6 +3,9 @@ title = 'macOS 改键实战：让中英键短按 ESC 长按 Control'
 date = '2026-05-22T10:50:00+08:00'
 draft = false
 tags = ['macOS', 'Karabiner-Elements', '改键', '键盘优化', '效率', 'Vim', '输入法']
+
+[cover]
+  image = 'covers/macos-remap-capslock-escape-control.jpg'
 +++
 
 还在纠结 macOS 上的中英切换键占用了宝贵的键盘位置？本文教你用 Karabiner-Elements 将它改造为短按 ESC、长按 Control 的高效双功能键，告别键位浪费！

@@ -4,6 +4,9 @@ date = '2026-08-08T14:30:00+08:00'
 draft = false
 tags = ['Hugo', 'Cloudflare Pages', '博客', '教程', 'R2', 'Pagefind', 'giscus', 'SEO']
 description = '以本博客为例，从安装 Hugo 到部署上线，再到站内搜索、评论区、搜索引擎收录，一份完整的免费博客搭建教程。'
+
+[cover]
+  image = 'covers/build-hugo-blog-from-scratch.jpg'
 +++
 
 > **更新（2026-09-06）**：本站主题已从 `hugo-coder` 迁移到 `hugo-PaperMod`，站内搜索从 Pagefind 换成 PaperMod 内置 Fuse.js。下文「主题选型」与「第六步：站内搜索」描述的是迁移前的做法，方法论（Hugo + Cloudflare Pages + R2 图床）仍适用。

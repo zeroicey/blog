@@ -3,6 +3,9 @@ title = 'Migrating from Tmux to Herdr: A Modern Terminal Multiplexer Built for A
 date = '2026-08-08T03:30:00+08:00'
 draft = false
 tags = ['Herdr', 'Tmux', 'Terminal Multiplexer', 'AI Agent', 'Migration', 'Productivity']
+
+[cover]
+  image = 'covers/herdr-tmux-migration.jpg'
 +++
 
 I'm a heavy Tmux user. I love its keybindings, but the UI has always been unbearable to me — and customizing it felt even worse.

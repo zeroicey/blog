@@ -3,6 +3,9 @@ title = 'macOS Key Remap: Make CapsLock Short Press ESC, Long Press Control'
 date = '2026-05-22T10:50:00+08:00'
 draft = false
 tags = ['macOS', 'Karabiner-Elements', 'Key Remapping', 'Keyboard Optimization', 'Productivity', 'Vim', 'Input Method']
+
+[cover]
+  image = 'covers/macos-remap-capslock-escape-control.jpg'
 +++
 
 Still bothered by the Chinese/English toggle key taking up valuable keyboard space on macOS? This tutorial shows you how to use Karabiner-Elements to transform it into a dual-function key: short press for ESC, long press for Control. Say goodbye to wasted key positions!

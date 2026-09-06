@@ -3,6 +3,9 @@ title = 'Exploring Interfaces in Python Programming'
 date = '2026-05-21T01:40:00+08:00'
 draft = false
 tags = ['Python', 'Interface', 'Protocol', 'Duck Typing', 'Design Patterns', 'Type Hints', 'Software Architecture', 'OOP']
+
+[cover]
+  image = 'covers/python-explore-programming-interface.jpg'
 +++
 
 # Why Interfaces Are Needed

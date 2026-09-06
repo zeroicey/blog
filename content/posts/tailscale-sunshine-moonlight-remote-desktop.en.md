@@ -4,6 +4,9 @@ date = '2026-09-05T15:00:00+08:00'
 draft = false
 tags = ['Tailscale', 'Headscale', 'Sunshine', 'Moonlight', 'RustDesk', 'Remote Desktop', 'Self-Hosted', 'Tutorial']
 description = 'Give a monitor-less server a remote desktop: a DP dummy plug fakes a display, Sunshine encodes with an AMD iGPU in hardware, and Moonlight streams over a Tailscale P2P connection. Compare with RustDesk soft-encoding, and self-host a RustDesk relay.'
+
+[cover]
+  image = 'covers/tailscale-sunshine-moonlight-remote-desktop.jpg'
 +++
 
 The previous post, *Self-Hosting Tailscale from Scratch*, pulled all my machines into one virtual LAN. Every device can now reach every other by address — but "reachable" and "feels like sitting at the keyboard" are two different things.

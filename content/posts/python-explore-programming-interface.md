@@ -3,6 +3,9 @@ title = 'Python 探索编程中的接口'
 date = '2026-05-21T01:40:00+08:00'
 draft = false
 tags = ['Python', '接口', 'Protocol', '鸭子类型', '设计模式', '类型提示', '软件架构', '面向对象']
+
+[cover]
+  image = 'covers/python-explore-programming-interface.jpg'
 +++
 
 # 为什么需要接口

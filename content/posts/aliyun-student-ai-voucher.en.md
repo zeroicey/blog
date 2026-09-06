@@ -4,6 +4,9 @@ date = '2026-08-27T21:50:00+08:00'
 draft = false
 tags = ['Alibaba Cloud', 'Freebie', 'Student', 'Bailian', 'AI', 'DeepSeek', 'Tutorial']
 description = 'Alibaba Cloud runs a once-a-year student certification that hands out a 300 CNY no-minimum-spend voucher, redeemable as AI credits on Bailian — enough to call models like DeepSeek. Three steps: log in, verify, claim.'
+
+[cover]
+  image = 'covers/aliyun-student-ai-voucher.jpg'
 +++
 
 This post should really be titled "A Guide to Free Stuff." For the sake of appearances, though, I'll give it the respectable name "reasonable use of resources." After all, the 300 yuan is sitting right there on Alibaba Cloud, given away once a year. Not claiming it would be the actual waste.
