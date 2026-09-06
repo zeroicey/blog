@@ -6,6 +6,8 @@ tags = ['Hugo', 'Cloudflare Pages', '博客', '教程', 'R2', 'Pagefind', 'giscu
 description = '以本博客为例，从安装 Hugo 到部署上线，再到站内搜索、评论区、搜索引擎收录，一份完整的免费博客搭建教程。'
 +++
 
+> **更新（2026-09-06）**：本站主题已从 `hugo-coder` 迁移到 `hugo-PaperMod`，站内搜索从 Pagefind 换成 PaperMod 内置 Fuse.js。下文「主题选型」与「第六步：站内搜索」描述的是迁移前的做法，方法论（Hugo + Cloudflare Pages + R2 图床）仍适用。
+
 你现在看到的这个网站，就是一篇"教程本身"——它由 Hugo 生成、托管在 Cloudflare Pages 上、图片放在 Cloudflare R2、有站内搜索和 GitHub 评论区。整套方案 **零服务器成本**，只有域名费（几十块一年）。
 
 这篇文章把从 0 到上线的完整过程记录下来，跟着做你也能拥有一个同样的博客。
