@@ -1,0 +1,49 @@
+{{- /* giscus 评论：PaperMod 原生 comments.html 是空壳，这里接入 giscus，并随 PaperMod 主题切换同步明暗 */ -}}
+{{- if isset .Site.Params "giscus" -}}
+  {{- $giscus := .Site.Params.giscus -}}
+  {{- if and (isset $giscus "repo") (ne $giscus.repo "") -}}
+  <div class="comments">
+    <script>
+      (function () {
+        function getTheme() {
+          return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        }
+
+        function sendTheme(theme) {
+          var iframe = document.querySelector("iframe.giscus-frame");
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, "https://giscus.app");
+        }
+
+        var lang = '{{ if eq .Site.Language.Lang "zh" }}zh-CN{{ else }}en{{ end }}';
+        var s = document.createElement("script");
+        s.src = "https://giscus.app/client.js";
+        s.setAttribute("data-repo", {{ $giscus.repo | jsonify | safeJS }});
+        s.setAttribute("data-repo-id", {{ $giscus.repoID | jsonify | safeJS }});
+        s.setAttribute("data-category", {{ $giscus.category | jsonify | safeJS }});
+        s.setAttribute("data-category-id", {{ $giscus.categoryID | jsonify | safeJS }});
+        s.setAttribute("data-mapping", {{ default "pathname" $giscus.mapping | jsonify | safeJS }});
+        s.setAttribute("data-reactions-enabled", {{ default "1" $giscus.reactionsEnabled | jsonify | safeJS }});
+        s.setAttribute("data-emit-metadata", "0");
+        s.setAttribute("data-input-position", "bottom");
+        s.setAttribute("data-theme", getTheme());
+        s.setAttribute("data-lang", lang);
+        s.setAttribute("data-loading", {{ default "lazy" $giscus.loading | jsonify | safeJS }});
+        s.setAttribute("crossorigin", "anonymous");
+        s.async = true;
+        document.currentScript.parentNode.appendChild(s);
+
+        var observer = new MutationObserver(function (mutations) {
+          for (var i = 0; i < mutations.length; i++) {
+            if (mutations[i].attributeName === "data-theme") {
+              sendTheme(getTheme());
+              break;
+            }
+          }
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+      })();
+    </script>
+  </div>
+  {{- end -}}
+{{- end -}}

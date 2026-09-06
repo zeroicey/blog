@@ -1,6 +1,9 @@
 baseURL = 'https://zeroicey.me/'
-theme = 'hugo-coder'
-defaultContentLanguage = 'zh-cn'
+theme = 'hugo-PaperMod'
+defaultContentLanguage = 'zh'
+title = '雪宁韵'
+
+enableRobotsTXT = true
 
 [pagination]
   pagerSize = 10
@@ -13,76 +16,144 @@ defaultContentLanguage = 'zh-cn'
     [markup.goldmark.renderer]
       unsafe = true
 
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
 [params]
-  avatarURL = 'images/avatar.webp'
-  faviconICO = 'favicon.ico'
-  since = 2026
-  colorScheme = 'auto'
-  hideColorSchemeToggle = false
+  env = 'production'
+  comments = true
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
+  displayFullLangName = true
   preconnect = ['https://s3.blog.zeroicey.me']
 
-[params.giscus]
-  repo = 'zeroicey/blog'
-  repoID = 'R_kgDOSjjc-g'
-  category = 'General'
-  categoryID = 'DIC_kwDOSjjc-s4DC64_'
-  mapping = 'pathname'
-  theme = 'preferred_color_scheme'
-  loading = 'lazy'
-  reactionsEnabled = '1'
+  [params.assets]
+    favicon = 'favicon.ico'
 
-[[params.social]]
-  name = 'GitHub'
-  icon = 'fa-brands fa-github fa-2x'
-  weight = 1
-  url = 'https://github.com/zeroicey'
+  [params.giscus]
+    repo = 'zeroicey/blog'
+    repoID = 'R_kgDOSjjc-g'
+    category = 'General'
+    categoryID = 'DIC_kwDOSjjc-s4DC64_'
+    mapping = 'pathname'
+    theme = 'preferred_color_scheme'
+    loading = 'lazy'
+    reactionsEnabled = '1'
 
-[[params.social]]
-  name = 'Email'
-  icon = 'fa-solid fa-envelope fa-2x'
-  weight = 2
-  url = 'mailto:zeroicey.hp@gmail.com'
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/zeroicey'
 
-[languages.zh-cn]
+  [[params.socialIcons]]
+    name = 'email'
+    url = 'mailto:zeroicey.hp@gmail.com'
+
+[languages.zh]
   label = '中文'
-  locale = 'zh-CN'
+  weight = 1
   title = '雪宁韵'
-  weight = 1
 
-  [languages.zh-cn.params]
+  [languages.zh.params]
     author = '雪宁韵'
-    info = ['“去码头整点薯条”']
     description = '雪宁韵的个人博客'
-    keywords = 'blog,personal,hugo'
+    keywords = ['blog', 'personal', 'hugo']
 
-[[languages.zh-cn.menu.main]]
-  name = '博客'
-  weight = 1
-  url = 'posts/'
+    [languages.zh.params.profileMode]
+      enabled = true
+      title = '雪宁韵'
+      subtitle = '“去码头整点薯条”'
+      imageUrl = 'images/avatar.webp'
+      imageTitle = '雪宁韵'
 
-[[languages.zh-cn.menu.main]]
-  name = '关于'
-  weight = 2
-  url = 'about/'
+      [[languages.zh.params.profileMode.buttons]]
+        name = '博客'
+        url = '/posts/'
+
+      [[languages.zh.params.profileMode.buttons]]
+        name = '关于'
+        url = '/about/'
+
+  [[languages.zh.menu.main]]
+    name = '博客'
+    url = 'posts/'
+    weight = 1
+
+  [[languages.zh.menu.main]]
+    name = '关于'
+    url = 'about/'
+    weight = 2
+
+  [[languages.zh.menu.main]]
+    name = '标签'
+    url = 'tags/'
+    weight = 3
+
+  [[languages.zh.menu.main]]
+    name = '归档'
+    url = 'archives/'
+    weight = 4
+
+  [[languages.zh.menu.main]]
+    name = '搜索'
+    url = 'search/'
+    weight = 5
 
 [languages.en]
   label = 'English'
-  locale = 'en-US'
-  title = 'zeroicey'
   weight = 2
+  title = 'zeroicey'
 
   [languages.en.params]
     author = 'zeroicey'
-    info = ['Go to the dock to order some french fries.']
     description = "zeroicey's personal website"
-    keywords = 'blog,personal,hugo'
+    keywords = ['blog', 'personal', 'hugo']
 
-[[languages.en.menu.main]]
-  name = 'Blog'
-  weight = 1
-  url = 'posts/'
+    [languages.en.params.profileMode]
+      enabled = true
+      title = 'zeroicey'
+      subtitle = 'Go to the dock to order some french fries.'
+      imageUrl = 'images/avatar.webp'
+      imageTitle = 'zeroicey'
 
-[[languages.en.menu.main]]
-  name = 'About'
-  weight = 2
-  url = 'about/'
+      [[languages.en.params.profileMode.buttons]]
+        name = 'Blog'
+        url = '/posts/'
+
+      [[languages.en.params.profileMode.buttons]]
+        name = 'About'
+        url = '/about/'
+
+  [[languages.en.menu.main]]
+    name = 'Blog'
+    url = 'posts/'
+    weight = 1
+
+  [[languages.en.menu.main]]
+    name = 'About'
+    url = 'about/'
+    weight = 2
+
+  [[languages.en.menu.main]]
+    name = 'Tags'
+    url = 'tags/'
+    weight = 3
+
+  [[languages.en.menu.main]]
+    name = 'Archive'
+    url = 'archives/'
+    weight = 4
+
+  [[languages.en.menu.main]]
+    name = 'Search'
+    url = 'search/'
+    weight = 5

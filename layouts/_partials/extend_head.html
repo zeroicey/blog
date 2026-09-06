@@ -1,0 +1,6 @@
+{{- /* R2 图床 preconnect，加速文章内远程图片加载 */ -}}
+{{- with .Site.Params.preconnect -}}
+  {{- range . -}}
+<link rel="preconnect" href="{{ . }}" crossorigin>
+  {{- end -}}
+{{- end -}}
