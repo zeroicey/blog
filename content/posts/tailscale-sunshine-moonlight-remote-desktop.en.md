@@ -6,7 +6,7 @@ tags = ['Tailscale', 'Headscale', 'Sunshine', 'Moonlight', 'RustDesk', 'Remote D
 description = 'Give a monitor-less server a remote desktop: a DP dummy plug fakes a display, Sunshine encodes with an AMD iGPU in hardware, and Moonlight streams over a Tailscale P2P connection. Compare with RustDesk soft-encoding, and self-host a RustDesk relay.'
 
 [cover]
-  image = 'https://s3.blog.zeroicey.me/covers/tailscale-sunshine-moonlight-remote-desktop.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/tailscale-sunshine-moonlight-remote-desktop-v2.jpg'
 +++
 
 The previous post, *Self-Hosting Tailscale from Scratch*, pulled all my machines into one virtual LAN. Every device can now reach every other by address — but "reachable" and "feels like sitting at the keyboard" are two different things.

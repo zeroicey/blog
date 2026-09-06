@@ -6,7 +6,7 @@ tags = ['OpenCode Go', 'Claude Code', 'DeepSeek', 'routatic-proxy', 'AI Agent', 
 description = 'DeepSeek 官方 API 按量付费太贵还即将涨价？OpenCode Go 每月 $10 就能拿到 $60 的模型用量。本文用开源项目 routatic-proxy 把这份订阅接进 Claude Code，附完整配置和两个真实的坑。'
 
 [cover]
-  image = 'https://s3.blog.zeroicey.me/covers/opencode-go-in-claude-code.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/opencode-go-in-claude-code-v2.jpg'
 +++
 
 我一直用 Claude Code 写代码，模型后端换过好几家。去年换到 DeepSeek 官方 API，结果按量付费那个速度，充 100 块用不了几天就见底——然后某天下午，`claude` 直接给我甩了个 **402 Payment Required**，余额不够了。

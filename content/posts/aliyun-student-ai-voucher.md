@@ -6,7 +6,7 @@ tags = ['阿里云', '白嫖', '学生认证', '百炼', 'AI', 'DeepSeek', '教�
 description = '阿里云一年一次的学生认证，通过后送 300 元无门槛代金券，可换成百炼的 AI 额度，直接调用 DeepSeek 等高级模型。整个流程三步走完：登录、认证、领券。'
 
 [cover]
-  image = 'https://s3.blog.zeroicey.me/covers/aliyun-student-ai-voucher.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/aliyun-student-ai-voucher-v2.jpg'
 +++
 
 这篇文章按理说该叫《白嫖指南》，但为了观感，我决定给它取个正经点的名字——「资源的合理利用」。毕竟这 300 块钱就明晃晃摆在阿里云那儿，一年白送一次，你不去领，反而是对资源的浪费。

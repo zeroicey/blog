@@ -5,7 +5,7 @@ draft = false
 tags = ['Herdr', 'Tmux', 'Terminal Multiplexer', 'AI Agent', 'Migration', 'Productivity']
 
 [cover]
-  image = 'https://s3.blog.zeroicey.me/covers/herdr-tmux-migration.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/herdr-tmux-migration-v2.jpg'
 +++
 
 I'm a heavy Tmux user. I love its keybindings, but the UI has always been unbearable to me — and customizing it felt even worse.

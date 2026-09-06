@@ -5,7 +5,7 @@ draft = false
 tags = ['Python', 'Interface', 'Protocol', 'Duck Typing', 'Design Patterns', 'Type Hints', 'Software Architecture', 'OOP']
 
 [cover]
-  image = 'https://s3.blog.zeroicey.me/covers/python-explore-programming-interface.jpg'
+  image = 'https://s3.blog.zeroicey.me/covers/python-explore-programming-interface-v2.jpg'
 +++
 
 # Why Interfaces Are Needed
